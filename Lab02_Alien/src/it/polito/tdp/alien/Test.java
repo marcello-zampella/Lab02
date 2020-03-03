@@ -8,9 +8,7 @@ public class Test {
 		prova.addWord("red", "rosso");
 		prova.addWord("red", "rosa");
 		prova.addWord("red", "rough");
-
 		prova.addWord("red", "rossore");
-
 		prova.addWord("black", "nero");
 		prova.addWord("blue", "blu");
 		prova.addWord("yellow", "giallo"); 

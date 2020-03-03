@@ -52,10 +52,10 @@ public class AlienController {
     	    		this.txtResult.appendText("inserire una parola \n");
     	    		return;
     	    	}
-    	    	if (!parola.matches("[a-zA-Z]*")) {
+    	    /*	if (!parola.matches("[a-zA-Z]*" || )) {
     	    		this.txtResult.appendText("inserire una parola corretta \n");
     	    		return;
-    	    	}
+    	    	} */
     	    	AlienDictionary traduzione= test.prova;
     	    	if(traduzione.translateWord(parola)==null)
     	    		this.txtResult.appendText("La parola cercata non esiste \n");
