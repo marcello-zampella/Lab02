@@ -31,7 +31,7 @@
                         <Insets left="100.0" right="10.0" top="30.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="txtWord" maxWidth="400.0" minWidth="1.0" prefWidth="200.0" promptText="Insert Text...">
+                  <TextField fx:id="txtWord" maxWidth="400.0" minWidth="1.0" onAction="#doTranslate" prefWidth="200.0" promptText="Insert Text...">
                      <HBox.margin>
                         <Insets top="30.0" />
                      </HBox.margin>

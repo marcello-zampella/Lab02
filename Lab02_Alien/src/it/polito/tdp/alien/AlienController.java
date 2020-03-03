@@ -46,6 +46,7 @@ public class AlienController {
     @FXML
     void doTranslate(ActionEvent event) {
     	    	String parola=this.txtWord.getText();
+    	    	this.txtWord.clear();
     	    	parola =parola.trim();
     	    	if(parola==null || parola.length()==0) {
     	    		this.txtResult.appendText("inserire una parola \n");
