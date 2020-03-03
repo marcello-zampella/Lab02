@@ -7,7 +7,6 @@ public class AlienDictionary {
 	
 	public AlienDictionary() {
 		parole= new ArrayList<Word>();
-		parole.add(new Word("boh","beh"));
 	}
 
 	public void addWord(String alienWord, String translation) {
@@ -27,5 +26,7 @@ public class AlienDictionary {
 		}
 		return null;
 	}
+	
+	
 
 }

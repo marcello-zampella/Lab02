@@ -17,6 +17,8 @@ import javafx.scene.control.TextField;
 
 public class AlienController {
 	
+	private Test test;
+	
     @FXML
     private ResourceBundle resources;
     @FXML
@@ -37,19 +39,27 @@ public class AlienController {
     	assert txtResult != null : "fx:id=\"txtResult\" was not injected: check your FXML file 'Alien.fxml'.";
     	assert btnTranslate != null : "fx:id=\"bntTranslate\" was not injected: check your FXML file 'Alien.fxml'.";
     	assert btnReset != null : "fx:id=\"btnReset\" was not injected: check your FXML file 'Alien.fxml'.";
-    	
+    	test= new Test();
     }
   
     
     @FXML
     void doTranslate(ActionEvent event) {
     	    	String parola=this.txtWord.getText();
-    	    	if (parola.)
-    	    	AlienDictionary traduzione= new AlienDictionary();
+    	    	parola =parola.trim();
+    	    	if(parola==null || parola.length()==0) {
+    	    		this.txtResult.appendText("inserire una parola \n");
+    	    		return;
+    	    	}
+    	    	if (!parola.matches("[a-zA-Z]*")) {
+    	    		this.txtResult.appendText("inserire una parola corretta \n");
+    	    		return;
+    	    	}
+    	    	AlienDictionary traduzione= test.prova;
     	    	if(traduzione.translateWord(parola)==null)
-    	    		this.txtResult.appendText("La parola cercata non esiste");
+    	    		this.txtResult.appendText("La parola cercata non esiste \n");
     	    	else
-    	    		this.txtResult.appendText(traduzione.translateWord(parola));
+    	    		this.txtResult.appendText(traduzione.translateWord(parola)+"\n");
     	    	
     }
     

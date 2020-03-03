@@ -65,9 +65,18 @@ public class Word {
 		if (alien == null) {
 			if (other.alien != null)
 				return false;
-		} else if (!alien.equals(other.alien))
+		} else if (!alien.toLowerCase().equals(other.alien.toLowerCase()))
 			return false;
 		return true;
+	}
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "Word [alien=" + alien + ", translation=" + translation + "]";
 	}
 	
 	
