@@ -44,8 +44,12 @@ public class AlienController {
     @FXML
     void doTranslate(ActionEvent event) {
     	    	String parola=this.txtWord.getText();
+    	    	if (parola.)
     	    	AlienDictionary traduzione= new AlienDictionary();
-    	    	this.txtResult.appendText(traduzione.translateWord(parola)); 
+    	    	if(traduzione.translateWord(parola)==null)
+    	    		this.txtResult.appendText("La parola cercata non esiste");
+    	    	else
+    	    		this.txtResult.appendText(traduzione.translateWord(parola));
     	    	
     }
     

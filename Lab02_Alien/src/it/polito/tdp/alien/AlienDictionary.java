@@ -6,7 +6,8 @@ public class AlienDictionary {
 	private List<Word> parole;
 	
 	public AlienDictionary() {
-		List<Word> parole= new ArrayList<Word>();
+		parole= new ArrayList<Word>();
+		parole.add(new Word("boh","beh"));
 	}
 
 	public void addWord(String alienWord, String translation) {
