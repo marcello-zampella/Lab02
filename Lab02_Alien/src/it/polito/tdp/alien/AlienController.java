@@ -43,12 +43,16 @@ public class AlienController {
     
     @FXML
     void doTranslate(ActionEvent event) {
+    	    	String parola=this.txtWord.getText();
+    	    	AlienDictionary traduzione= new AlienDictionary();
+    	    	this.txtResult.appendText(traduzione.translateWord(parola)); 
     	    	
     }
     
     
     @FXML
     void doReset(ActionEvent event) {
+    	this.txtResult.clear();
 
     }
     
