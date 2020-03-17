@@ -27,20 +27,33 @@ public class AlienDictionary {
 	
 	public String translateWord (String alienWord) {
 		WordErhanced parola= new WordErhanced(alienWord,null);
-		int prova=parole.indexOf(parola);
-		int i=0;
-		if(prova!=-1) {
-			String ritorno=alienWord+" = ";
-			for(String s: parole.get(prova).getTranslation()) {
+		//int prova=parole.indexOf(parola);
+		int i;
+		boolean flag=true;
+		String ritorno=null;
+		for(WordErhanced w: parole) {
+		if(w.equals(parola)) {
+			i=0;
+			if(flag==false) {
+				ritorno+="\n ma anche: \n";
+			}
+			else if (parola.getAlien().contains("?"))
+				ritorno="La parola contierene "+parola.getAlien()+" il carattere misterioso \n";
+			else
+				ritorno="";
+			flag=false;
+			ritorno+=w.getAlien()+" = ";
+			for(String s: w.getTranslation()) {
 				i++;
-				if(parole.get(prova).getTranslation().size()!=i)
+				if(w.getTranslation().size()!=i)
 					ritorno+=s+" /";
 				else
 					ritorno+=s;
 			}
-			return ritorno;
 		}
-		return null;
+		}
+			return ritorno;
+		
 	}
 	
 	

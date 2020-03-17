@@ -52,6 +52,13 @@ public class AlienController {
     	    		this.txtResult.appendText("inserire una parola \n");
     	    		return;
     	    	}
+    	    	for(int i=0;i<parola.length();i++) {
+    	    		int lettera=parola.charAt(i);
+    	    		if((lettera<65 && lettera!=63) || lettera>122 || (lettera<97 && lettera>90) ) {
+    	    			this.txtResult.appendText("INSERIRE PAROLA CORRETTA \n");
+    	    			return;
+    	    		}
+    	    	}
     	    /*	if (!parola.matches("[a-zA-Z]*" || )) {
     	    		this.txtResult.appendText("inserire una parola corretta \n");
     	    		return;
